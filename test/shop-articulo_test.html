@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>shop-articulo test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../shop-articulo.html">
+  </head>
+  <body>
+
+    <test-fixture id="basic">
+      <template>
+        <shop-articulo></shop-articulo>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('shop-articulo', function() {
+
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'shop-articulo');
+        });
+
+      });
+    </script>
+  </body>
+</html>
