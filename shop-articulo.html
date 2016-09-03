@@ -13,7 +13,18 @@
       :host {
         display: block;
       }
+      .content-article{
+        background: #EBFCFB;
+      }
     </style>
+    <div class="content-article">
+        <figure>
+            <img src="{{data.img}}" alt="">
+        </figure>
+        <h1>{{data.title}}</h1>
+        <h3>{{data.contenido}}</h3>
+        <p>{{data.precio}}</p>
+    </div>
     <h2>Hello [[prop1]]</h2>
   </template>
 
@@ -21,12 +32,19 @@
     Polymer({
 
       is: 'shop-articulo',
-
+      
       properties: {
         prop1: {
           type: String,
           value: 'shop-articulo',
         },
+        data : {
+          type: object,
+          value: {title: 'Producto 1',
+                  contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea voluptas earum harum provident beatae! Saepe, voluptatibus delectus iusto vel culpa!', 
+                  price: '12.34',
+                  img: 'https://www.edx.org/sites/default/files/course/image/promoted/mitx_6.00.1.x_378x225.jpg'},
+        }
       },
 
     });
