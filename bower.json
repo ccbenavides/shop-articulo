@@ -2,7 +2,8 @@
   "name": "shop-articulo",
   "main": "shop-articulo.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0"
+    "polymer": "Polymer/polymer#^1.4.0",
+    "shop-button": "ccbenavides/shop-button"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",

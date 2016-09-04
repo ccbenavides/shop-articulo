@@ -1,4 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../shop-button/shop-button.html">
 
 <!--
 `shop-articulo`
@@ -14,18 +15,54 @@
         display: block;
       }
       .content-article{
-        background: #EBFCFB;
+        border : 1px solid #ddd;
       }
+      .article_figure{
+        margin: 0;
+      }
+
+      .article_img{
+        width : 100%;
+      }
+
+      .article_h1{
+
+      }
+
+      .article_h3{
+        margin:0;
+
+      }
+
+      .article_p{
+
+      }
+      .article_betwen{
+        display: flex;
+        align-items : center;
+        justify-content : space-between;
+
+      }
+      .article_content{
+        padding : 0 30px 30px 30px;
+      }
+
     </style>
     <div class="content-article">
-        <figure>
-            <img src="{{data.img}}" alt="">
+        <figure class="article_figure">
+            <img class="article_img" src="{{data.img}}" alt="">
         </figure>
-        <h1>{{data.title}}</h1>
-        <h3>{{data.contenido}}</h3>
-        <p>{{data.precio}}</p>
+        <div class="article_content">
+          <h1 class="article_h1">{{data.title}}</h1>
+          <p class="article_p">{{data.contenido}}</p>
+          <div class="article_betwen">
+            <h3 class="article_h3">{{data.price}}</h3>
+            <shop-button>Adquirir </shop-button>
+
+          </div>
+
+        </div>
     </div>
-    <h2>Hello [[prop1]]</h2>
   </template>
 
   <script>
@@ -34,16 +71,12 @@
       is: 'shop-articulo',
       
       properties: {
-        prop1: {
-          type: String,
-          value: 'shop-articulo',
-        },
         data : {
-          type: object,
-          value: {title: 'Producto 1',
+          type: Object,
+          value: {title: 'Polera Moda Otoño',
                   contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea voluptas earum harum provident beatae! Saepe, voluptatibus delectus iusto vel culpa!', 
-                  price: '12.34',
-                  img: 'https://www.edx.org/sites/default/files/course/image/promoted/mitx_6.00.1.x_378x225.jpg'},
+                  price: '12.34 $',
+                  img: 'http://www.vifore.net/files/productos/league-of-legends-shield-crest-zip-up-hoodie-m-949-1m.jpg'},
         }
       },
 
